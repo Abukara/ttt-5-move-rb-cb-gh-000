@@ -2,4 +2,24 @@
 
 require_relative '../lib/move.rb'
 
+puts "Welcome to Tic Tac Toe!"
 # Code your CLI Here
+board = [" ", " ", " "," ", " ", " "," ", " ", " "]
+display_board(board)
+puts "Where would you like to go?"
+
+
+
+def input_to_index
+  new_move = gets.strip
+  array_ab = new_move.to_i
+  array_c = array_ab-1
+  return array_c
+end
+
+
+def update_array_at_with(board, new_move, turn="X")
+ board[new_move] = turn
+ return board
+end
+display_board(update_array_at_with(board,input_to_index, "X"))
