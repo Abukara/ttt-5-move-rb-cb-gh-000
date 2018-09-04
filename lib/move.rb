@@ -6,7 +6,7 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 def numeric?
-  Float(self) != nil secue false
+  Float(self) != nil rescue false
 end
 
 
