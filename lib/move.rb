@@ -13,18 +13,17 @@ def numeric?
 
 
 def input_to_index(new_move)
-  print "123".numeric?
-#  if new_move.numeric?
-#    print "is not a number"
-#    return -1
-  #end
-  array_ab = new_move.to_i
-  if array_ab > 10 or array_ab < 1
-    print "Test"
+  if !/\A\d+\z/.match(new_move)
     return -1
   else
-    array_c = array_ab-1
-    return array_c
+    array_ab = new_move.to_i
+    if array_ab > 10 or array_ab < 1
+      print "Test"
+      return -1
+    else
+      array_c = array_ab-1
+      return array_c
+    end
   end
 end
 # code your input_to_index and move method here!
