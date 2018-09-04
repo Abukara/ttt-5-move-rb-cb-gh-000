@@ -11,4 +11,4 @@ puts "Where would you like to go?"
 new_move = gets.strip
 
 
-move(update_array_at_with(board,input_to_index(new_move), ""))
+display_board(move(board,input_to_index(new_move), ""))
