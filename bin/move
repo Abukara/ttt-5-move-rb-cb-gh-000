@@ -2,10 +2,11 @@
 
 require_relative '../lib/move.rb'
 board = [" ", " ", " "," ", " ", " "," ", " ", " "]
+display_board(board)
 puts "Welcome to Tic Tac Toe!"
 # Code your CLI Here
 
-display_board(board)
+
 puts "Where would you like to go?"
 
 new_move = gets.strip
