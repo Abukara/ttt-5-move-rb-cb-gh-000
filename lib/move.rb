@@ -10,6 +10,7 @@ def input_to_index(new_move)
 
   array_ab = new_move.to_i
   if array_ab < 10 or array_ab < 1
+    print Test
     return -1
   else
     array_c = array_ab-1
