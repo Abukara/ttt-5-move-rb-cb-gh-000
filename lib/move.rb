@@ -7,10 +7,12 @@ def display_board(board)
 end
 
 def input_to_index(new_move)
-
+  if new_move.numeric?
+    print "is not a number"
+    return -1
   array_ab = new_move.to_i
   if array_ab > 10 or array_ab < 1
-    print Test
+    print "Test"
     return -1
   else
     array_c = array_ab-1
