@@ -7,8 +7,11 @@ def display_board(board)
 end
 
 def input_to_index(new_move)
-  new_move = gets.strip
+  
   array_ab = new_move.to_i
+  if array_ab < 10 or array_ab > 1
+    return -1
+  else
   array_c = array_ab-1
   return array_c
 end
