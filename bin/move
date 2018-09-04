@@ -8,10 +8,10 @@ board = [" ", " ", " "," ", " ", " "," ", " ", " "]
 display_board(board)
 puts "Where would you like to go?"
 
-
+new_move = gets.strip
 
 def update_array_at_with(board, new_move, turn="X")
  board[new_move] = turn
  return board
 end
-display_board(update_array_at_with(board,input_to_index, "X"))
+display_board(update_array_at_with(board,input_to_index(new_move), "X"))
