@@ -7,10 +7,6 @@ def display_board(board)
 end
 
 
-def numeric?
-    Float(self) != nil rescue false
-  end
-
 
 def input_to_index(new_move)
   if !/\A\d+\z/.match(new_move)
@@ -25,5 +21,9 @@ def input_to_index(new_move)
       return array_c
     end
   end
+end
+def move(board, new_move, turn="X")
+ board[new_move] = turn
+ return board
 end
 # code your input_to_index and move method here!
